@@ -29,21 +29,18 @@ let raining = data.weather[0].description.includes("rain")
 
 <Layout meta={{ title, description, canonical }}>
   <main>
-    <div class="px-12 flex flex-auto">
-      <div class="flex align-center">
-        <h1>
-          Asheville, Is It Raining?
-        </h1>
+    <section class="flex items-center h-full p-8">
+      <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+        <div class="max-w-6xl text-center">
+          <h2 class="mb-8 font-bold text-6xl md:text-8xl">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">Asheville, Is It Raining?
+            </span>
+          </h2>
+          <p class="text-4xl font-semibold md:text-6xl">
+            {raining ? "Yes" : "No"}
+          </p>
+        </div>
       </div>
-      <div>
-        <h3>
-          <br/>{raining ? "Yes" : "No"}
-        </h3>
-        <img src={iconUrl} width="25" alt="Icon">
-      </div>
-      
-    </div>
-    
-    
+    </section>
   </main>
 </Layout>
