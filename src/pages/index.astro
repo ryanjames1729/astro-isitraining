@@ -38,6 +38,7 @@ console.log(data.weather[0].description)
             </span>
           </h2>
           <p class="text-4xl font-semibold md:text-6xl text-center items-center justify-center">
+            <span>{data.weather[0].description}</span>
             {raining ? <div class="flex justify-center items-center flex-col"><p class="text-4xl">Yes</p><iframe class="block" src="https://giphy.com/embed/Jq7y34Hgfy01y" width="480" height="264" frameBorder="0"></iframe></div> : "No"}
           </p>
         </div>
