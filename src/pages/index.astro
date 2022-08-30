@@ -23,8 +23,9 @@ const API_KEY = "be4e7f1aab164ff3fbebe282933c02eb"
 const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=35.5951&lon=-82.5515&appid=be4e7f1aab164ff3fbebe282933c02eb');
 const data = await response.json()
 const iconType = data.weather[0].icon;
-const iconUrl = "http://openweathermap.org/img/wn/"+iconType+"@2x.png"
+// const iconUrl = "http://openweathermap.org/img/wn/"+iconType+"@2x.png"
 let raining = data.weather[0].description.includes("rain")
+console.log(data.weather[0].description)
 ---
 
 <Layout meta={{ title, description, canonical }}>
