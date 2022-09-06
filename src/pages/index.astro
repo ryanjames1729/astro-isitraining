@@ -46,8 +46,11 @@ const canonical = new URL("", Astro.site);
       // const iconUrl = "http://openweathermap.org/img/wn/"+iconType+"@2x.png"
       let raining = data.weather[0].description.includes("rain")
       console.log(data.weather[0].description)
+      if (!response) {
+        document.getElementById("weatherID").innerHTML = "Gather data...please wait while I walk outside."
+      }
       if (raining) {
-        document.getElementById("weatherID").innerHTML = `<div class="flex justify-center items-center flex-col"><p class="text-4xl">Yes</p><iframe class="block" src="https://giphy.com/embed/Jq7y34Hgfy01y" width="480" height="264" frameBorder="0"></iframe></div>`
+        document.getElementById("weatherID").innerHTML = `<div class="flex justify-center items-center flex-col"><p class="text-4xl"></p><iframe class="block" src="https://giphy.com/embed/Jq7y34Hgfy01y" width="480" height="264" frameBorder="0"></iframe></div>`
       } else {
         document.getElementById("weatherID").innerHTML = "No"
       }
